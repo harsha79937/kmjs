@@ -1,17 +1,13 @@
-function getduplicate(arr){
-    let duplicate=[];
-    let seen=new Set();
-    let added=new Set();
+const data = [10, 34, 56, 78, 11, 9, 9, 11];
+const duplicates = [];
 
-    for(let index=0;index<arr.length;index++){
-        if (seen.has(arr[index])&&!added.has(arr[index])){
-            duplicate.push(arr[index]);
-            added.add(arr[index]);
-        }else{
-            seen.add(arr[index]);
+for (let i = 0; i < data.length; i++) {
+    for (let j = i + 1; j < data.length; j++) {
+        if (data[i] === data[j] )//&& !duplicates.includes(data[i])) 
+        {
+            duplicates.push(data[i]);
         }
-    }return duplicate;
+    }
 }
-const data=[10,11,12,13,14,15,13,15];
-console.log(getduplicate(data));
 
+console.log(duplicates);
