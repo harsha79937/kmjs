@@ -26,5 +26,5 @@ let people=[
         "city":"Bglr"
     } 
 ];
-let jsonstring=JSON.stringify(people);
+let jsonstring=JSON.stringify(person);
 console.log(jsonstring);
